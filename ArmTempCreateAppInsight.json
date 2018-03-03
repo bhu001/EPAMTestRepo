@@ -1,0 +1,17 @@
+ /* Create Application Insights resource */
+
+{
+  resources: [
+    {
+      "apiVersion": "2015-05-01",
+      "type": "microsoft.insights/components",
+      "name": "testAPPInsight",
+      "location": "central india",
+      "kind": "web",
+      "properties": { "ApplicationId": "nameOfAIAppResource" },
+      "dependsOn": [
+        "[concat('Microsoft.Web/sites/', testWebApp)]"
+      ]
+    }
+   ]
+ } 
